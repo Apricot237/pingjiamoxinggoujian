@@ -1,7 +1,8 @@
+好的，这是根据您的要求修改后的完整 HTML 代码。主要改动是在“添加模型”模态框的第二步中，为“数据映射”表格增加了“来源系统”列，并将“系统字段名”改造为动态下拉框。
+
+```html
 <!DOCTYPE html>
 <html lang="zh-CN">
-
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,32 +39,27 @@
             --blue-800: #1971c2;
             --blue-900: #1864ab;
         }
-        
         body {
             font-family: 'Microsoft YaHei', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             background-color: #f5f7fa;
             color: var(--gray-800);
             font-size: 0.95rem;
         }
-        
         /* 导航栏样式 */
         .navbar {
             background-color: var(--primary-color);
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             padding: 0.75rem 0;
         }
-        
         .navbar-brand {
             font-weight: 600;
             font-size: 1.3rem;
             letter-spacing: 0.5px;
         }
-        
         .logo-container {
             display: flex;
             align-items: center;
         }
-        
         .logo {
             width: 40px;
             height: 40px;
@@ -78,13 +74,11 @@
             font-size: 1.2rem;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        
         /* 主容器样式 */
         .main-container {
             padding: 25px;
             margin-top: 20px;
         }
-        
         /* 卡片样式 */
         .card {
             border: none;
@@ -93,11 +87,9 @@
             margin-bottom: 25px;
             transition: all 0.3s ease;
         }
-        
         .card:hover {
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
-        
         .card-header {
             background-color: white;
             border-bottom: 1px solid var(--gray-200);
@@ -105,7 +97,6 @@
             padding: 18px 25px;
             border-radius: 12px 12px 0 0 !important;
         }
-        
         /* 按钮样式 */
         .btn {
             border-radius: 8px;
@@ -114,42 +105,34 @@
             transition: all 0.2s ease;
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
-        
         .btn:hover {
             transform: translateY(-1px);
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
-        
         .btn-primary {
             background-color: var(--primary-color);
             border-color: var(--primary-color);
         }
-        
         .btn-primary:hover {
             background-color: #0056b3;
             border-color: #0056b3;
         }
-        
         .btn-outline-primary {
             color: var(--primary-color);
             border-color: var(--primary-color);
         }
-        
         .btn-outline-primary:hover {
             background-color: var(--primary-color);
             border-color: var(--primary-color);
         }
-        
         .btn-sm {
             padding: 0.35rem 0.8rem;
             font-size: 0.8rem;
         }
-        
         /* 表格样式 */
         .table {
             margin-bottom: 0;
         }
-        
         .table thead th {
             background-color: var(--gray-100);
             font-weight: 600;
@@ -160,16 +143,13 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
-        
         .table td {
             padding: 12px 15px;
             vertical-align: middle;
         }
-        
         .table-hover tbody tr:hover {
             background-color: rgba(0, 102, 204, 0.05);
         }
-        
         /* 状态标签样式 */
         .status-badge {
             font-size: 0.75rem;
@@ -178,25 +158,20 @@
             font-weight: 500;
             letter-spacing: 0.5px;
         }
-        
         .status-active {
             background-color: var(--success-color);
         }
-        
         .status-inactive {
             background-color: var(--danger-color);
         }
-        
         .status-draft {
             background-color: var(--warning-color);
         }
-        
         /* 分页样式 */
         .pagination {
             justify-content: center;
             margin-top: 25px;
         }
-        
         .page-link {
             color: var(--primary-color);
             border-radius: 8px;
@@ -204,12 +179,10 @@
             border: none;
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
-        
         .page-item.active .page-link {
             background-color: var(--primary-color);
             border-color: var(--primary-color);
         }
-        
         /* 模态框样式 */
         .modal-content {
             border: none;
@@ -217,7 +190,6 @@
             box-shadow: 0 10px 40px rgba(0,0,0,0.15);
             overflow: hidden;
         }
-        
         .modal-header {
             background-color: var(--primary-color);
             color: white;
@@ -225,33 +197,27 @@
             padding: 1.5rem 2rem;
             border-radius: 16px 16px 0 0;
         }
-        
         .modal-title {
             font-weight: 600;
             font-size: 1.25rem;
             letter-spacing: 0.5px;
         }
-        
         .modal-header .btn-close {
             filter: brightness(0) invert(1);
             opacity: 0.8;
         }
-        
         .modal-header .btn-close:hover {
             opacity: 1;
         }
-        
         .modal-body {
             padding: 2rem;
         }
-        
         .modal-footer {
             background-color: var(--gray-100);
             border-top: none;
             padding: 1.5rem 2rem;
             border-radius: 0 0 16px 16px;
         }
-        
         /* 步骤导航样式 */
         .step-wizard {
             display: flex;
@@ -260,7 +226,6 @@
             position: relative;
             padding: 0 20px;
         }
-        
         .step-wizard::before {
             content: "";
             position: absolute;
@@ -272,7 +237,6 @@
             z-index: 1;
             border-radius: 3px;
         }
-        
         .step-wizard .step {
             display: flex;
             flex-direction: column;
@@ -281,7 +245,6 @@
             z-index: 2;
             width: 120px;
         }
-        
         .step-wizard .step-circle {
             width: 50px;
             height: 50px;
@@ -297,19 +260,16 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             font-size: 1.1rem;
         }
-        
         .step-wizard .step.active .step-circle {
             background-color: var(--primary-color);
             color: white;
             box-shadow: 0 4px 10px rgba(0, 102, 204, 0.3);
         }
-        
         .step-wizard .step.completed .step-circle {
             background-color: var(--success-color);
             color: white;
             box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3);
         }
-        
         .step-wizard .step-title {
             font-size: 0.85rem;
             color: var(--gray-600);
@@ -317,27 +277,22 @@
             font-weight: 500;
             line-height: 1.3;
         }
-        
         .step-wizard .step.active .step-title {
             color: var(--primary-color);
             font-weight: 600;
         }
-        
         /* 步骤内容样式 */
         .step-content {
             display: none;
             animation: fadeIn 0.5s ease-in-out;
         }
-        
         .step-content.active {
             display: block;
         }
-        
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        
         /* 步骤导航按钮样式 */
         .step-navigation {
             display: flex;
@@ -346,11 +301,9 @@
             padding-top: 20px;
             border-top: 1px solid var(--gray-200);
         }
-        
         .step-navigation .btn {
             min-width: 120px;
         }
-        
         /* 执行结果样式 */
         .execution-result {
             padding: 25px;
@@ -359,7 +312,6 @@
             margin-bottom: 25px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
-        
         .execution-score {
             font-size: 3.5rem;
             font-weight: 700;
@@ -367,23 +319,18 @@
             margin: 25px 0;
             letter-spacing: -1px;
         }
-        
         .score-excellent {
             color: var(--success-color);
         }
-        
         .score-good {
             color: var(--info-color);
         }
-        
         .score-average {
             color: var(--warning-color);
         }
-        
         .score-poor {
             color: var(--danger-color);
         }
-        
         /* 图表容器样式 */
         .chart-container {
             position: relative;
@@ -395,7 +342,6 @@
             padding: 15px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
-        
         /* 分析指标样式 */
         .analysis-metric {
             text-align: center;
@@ -406,25 +352,21 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             transition: all 0.3s ease;
         }
-        
         .analysis-metric:hover {
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
-        
         .analysis-metric-value {
             font-size: 2.2rem;
             font-weight: 700;
             color: var(--primary-color);
             margin-bottom: 8px;
         }
-        
         .analysis-metric-label {
             font-size: 0.9rem;
             color: var(--gray-600);
             font-weight: 500;
         }
-        
         /* 警告框样式 */
         .alert {
             border-radius: 10px;
@@ -432,12 +374,10 @@
             padding: 15px 20px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
-        
         .alert-info {
             background-color: var(--blue-100);
             color: var(--blue-800);
         }
-        
         /* 动作按钮样式 */
         .action-buttons .btn {
             margin-right: 6px;
@@ -445,26 +385,22 @@
             font-size: 0.85rem;
             border-radius: 6px;
         }
-        
         /* 表单样式 */
         .form-label {
             font-weight: 500;
             color: var(--gray-700);
             margin-bottom: 0.5rem;
         }
-        
         .form-control, .form-select {
             border-radius: 8px;
             border: 1px solid var(--gray-300);
             padding: 0.65rem 1rem;
             transition: all 0.2s ease;
         }
-        
         .form-control:focus, .form-select:focus {
             border-color: var(--blue-400);
             box-shadow: 0 0 0 0.25rem rgba(33, 150, 243, 0.25);
         }
-        
         /* 表格样式 */
         .param-table, .requirement-table, .source-table {
             margin-top: 20px;
@@ -472,7 +408,6 @@
             overflow: hidden;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
-        
         .param-table thead th, .requirement-table thead th, .source-table thead th {
             background-color: var(--blue-50);
             color: var(--blue-800);
@@ -482,12 +417,10 @@
             font-size: 0.8rem;
             letter-spacing: 0.5px;
         }
-        
         .param-table td, .requirement-table td, .source-table td {
             border: none;
             border-bottom: 1px solid var(--gray-200);
         }
-        
         /* 标签页样式 */
         .model-detail-tabs .nav-link {
             color: var(--gray-600);
@@ -498,38 +431,31 @@
             margin-right: 5px;
             transition: all 0.2s ease;
         }
-        
         .model-detail-tabs .nav-link:hover {
             color: var(--primary-color);
             background-color: var(--blue-100);
         }
-        
         .model-detail-tabs .nav-link.active {
             color: var(--primary-color);
             font-weight: 600;
             background-color: white;
             border-bottom: 3px solid var(--primary-color);
         }
-        
         /* 响应式调整 */
         @media (max-width: 768px) {
             .step-wizard .step {
                 width: 80px;
             }
-            
             .step-wizard .step-title {
                 font-size: 0.75rem;
             }
-            
             .modal-body {
                 padding: 1.5rem;
             }
-            
             .modal-header, .modal-footer {
                 padding: 1.2rem 1.5rem;
             }
         }
-        
         /* 自定义颜色 */
         :root {
             --blue-50: #f0f7ff;
@@ -543,7 +469,6 @@
             --blue-800: #1e3f8f;
             --blue-900: #1e3a6f;
         }
-        
         /* 步骤进度条样式 */
         .step-progress {
             height: 6px;
@@ -552,14 +477,12 @@
             margin: 20px 0 30px;
             overflow: hidden;
         }
-        
         .step-progress-bar {
             height: 100%;
             background-color: var(--primary-color);
             border-radius: 3px;
             transition: width 0.5s ease;
         }
-        
         /* 步骤标题样式 */
         .step-title-container {
             display: flex;
@@ -568,7 +491,6 @@
             padding-bottom: 15px;
             border-bottom: 1px solid var(--gray-200);
         }
-        
         .step-title-container .step-number {
             width: 36px;
             height: 36px;
@@ -582,13 +504,11 @@
             margin-right: 15px;
             font-size: 1.1rem;
         }
-        
         .step-title-container .step-title-text {
             font-size: 1.3rem;
             font-weight: 600;
             color: var(--gray-800);
         }
-        
         /* 步骤描述样式 */
         .step-description {
             color: var(--gray-600);
@@ -599,49 +519,31 @@
     </style>
 </head>
 <body>
-      <!-- 阮头部区域开始 -->
-        <div style="display: flex; align-items: center; padding: 15px 30px;background-color: #ffffff; border-bottom: 1px solid #c7c7c7;">
-            <div style="display: flex; align-items: center;">
-                <!-- 中国烟草LOGO SVG -->
-             <svg 
-        xmlns="http://www.w3.org/2000/svg" 
-        viewBox="0 0 225 64" 
-        fill="none" 
-        style="width: 200px; height: auto; margin-right: 26px;"
-        ><path fill="#1A1311" d="M75.51 57.152a9.15 9.15 0 0 1-5.376 2.277 4.987 4.987 0 0 1-3.757-1.53A5.04 5.04 0 0 1 65 54.335a5.765 5.765 0 0 1 3.142-5.18 6.957 6.957 0 0 1 3.611-.892c1.181-.008 2.355.167 3.482.52v2.522h-.666a2.445 2.445 0 0 0-1.222-1.9 4.547 4.547 0 0 0-2.421-.617 4.047 4.047 0 0 0-3.245 1.404 4.753 4.753 0 0 0-1.08 3.171 4.926 4.926 0 0 0 1.218 3.372 4.375 4.375 0 0 0 3.464 1.471 7.246 7.246 0 0 0 4.234-1.577l-.008.522ZM89.466 59.181H84.92v-.397a1.7 1.7 0 0 0 1.12-.3c.23-.291.337-.662.296-1.03V53.61h-5.67v3.843c0 .86.471 1.307 1.411 1.331v.397h-4.55v-.397c.398.039.796-.067 1.121-.3.229-.292.334-.662.294-1.03v-7.228a1.408 1.408 0 0 0-.294-1.027 1.761 1.761 0 0 0-1.12-.293v-.397h4.546v.397a1.761 1.761 0 0 0-1.121.293c-.223.293-.326.66-.287 1.027v2.87h5.67v-2.87a1.442 1.442 0 0 0-.287-1.027 1.761 1.761 0 0 0-1.121-.293v-.397h4.538v.397a1.742 1.742 0 0 0-1.12.293c-.23.29-.335.66-.294 1.027v7.234c-.043.37.063.744.293 1.03a1.68 1.68 0 0 0 1.121.293v.391ZM96.228 59.181h-4.546v-.397c.397.04.796-.067 1.12-.3a1.42 1.42 0 0 0 .287-1.03v-7.228a1.406 1.406 0 0 0-.286-1.027 1.744 1.744 0 0 0-1.121-.293v-.397h4.546v.397a1.72 1.72 0 0 0-1.12.293c-.23.29-.335.66-.294 1.027v7.234c0 .86.47 1.302 1.413 1.33l.001.391ZM110.51 48.907c-1.121.097-1.703 1.77-1.703 5.022v5.645h-.427l-8.027-9.735v3.105a22.408 22.408 0 0 0 .16 3.245c.245 1.642.762 2.509 1.552 2.6v.393h-4.036v-.397c1.131-.158 1.697-2.076 1.7-5.755v-2.882a1.229 1.229 0 0 0-.311-.961 1.762 1.762 0 0 0-1.088-.282v-.397h3.043l6.762 8.155v-2.471c0-3.416-.559-5.175-1.691-5.285v-.398h4.066v.398ZM123.053 59.187h-3.335v-.398h.208c.111 0 .161-.096.161-.273a.555.555 0 0 0-.036-.19l-1.121-2.901h-4.064a7.373 7.373 0 0 0-.641 2.402.872.872 0 0 0 .311.695c.22.184.501.278.788.263h.496v.402h-4.164v-.398c.699-.036 1.333-.695 1.896-1.997l3.82-8.725h.543l3.299 8.536c.164.47.378.921.641 1.344a1.57 1.57 0 0 0 1.202.842l-.004.398Zm-4.325-4.276-1.692-4.443-1.949 4.443h3.641ZM139.493 51.305h-.653c-.025-1.602-.968-2.403-2.829-2.403h-.507v8.554c0 .86.48 1.307 1.417 1.33v.396h-4.55v-.397c.398.04.796-.066 1.121-.298.23-.291.336-.662.295-1.031v-8.552h-.641c-1.723 0-2.611.8-2.663 2.402h-.647V48.13h.404c.086.251.206.38.368.38h8.131c.214 0 .31-.129.31-.38h.444v3.176ZM153.699 53.339a5.452 5.452 0 0 1-1.045 3.153 6.445 6.445 0 0 1-2.686 2.242 7.352 7.352 0 0 1-3.134.69 5.795 5.795 0 0 1-4.004-1.454 4.645 4.645 0 0 1-1.613-3.585 5.655 5.655 0 0 1 2.009-4.283 6.76 6.76 0 0 1 4.711-1.838 5.793 5.793 0 0 1 4.864 2.272 4.49 4.49 0 0 1 .902 2.803m-1.575 1.475a6.16 6.16 0 0 0-.709-2.893 5.012 5.012 0 0 0-2.162-2.192 5.382 5.382 0 0 0-2.487-.69 3.771 3.771 0 0 0-3.724 2.393 3.758 3.758 0 0 0-.253 1.545 5.799 5.799 0 0 0 1.429 3.9 5.035 5.035 0 0 0 3.983 1.81 3.804 3.804 0 0 0 3.922-3.873M165.009 55.424a3.298 3.298 0 0 1-1.518 2.712 5.413 5.413 0 0 1-3.24 1.05h-4.362v-.397c.397.042.797-.064 1.121-.298.23-.291.336-.662.294-1.031v-7.234a1.396 1.396 0 0 0-.294-1.027 1.724 1.724 0 0 0-1.121-.293v-.397h5.626a4.739 4.739 0 0 1 2.046.335 1.576 1.576 0 0 1 .905 1.552c0 1.143-.881 2.186-2.633 3.111a5.996 5.996 0 0 1 2.174.32 1.6 1.6 0 0 1 1.004 1.602m-2.213-3.907a2.868 2.868 0 0 0-.563-1.773 2.08 2.08 0 0 0-1.747-.843 2.49 2.49 0 0 0-1.467.396v3.893h1.813c1.308 0 1.962-.558 1.962-1.673m.428 4.935a2.663 2.663 0 0 0-.891-2.096 3.445 3.445 0 0 0-2.365-.788h-.948v4.4a3.41 3.41 0 0 0 1.997.683 2.077 2.077 0 0 0 2.072-1.337c.105-.275.15-.57.133-.863M178.103 59.187h-3.336v-.398h.207c.11 0 .16-.096.16-.273a.556.556 0 0 0-.039-.19l-1.111-2.901h-4.068a7.318 7.318 0 0 0-.64 2.402.841.841 0 0 0 .32.695c.219.184.5.278.786.263h.497v.402h-4.164v-.398c.696-.036 1.332-.695 1.893-1.997l3.792-8.725h.549l3.293 8.536c.168.469.383.919.641 1.344a1.579 1.579 0 0 0 1.21.842l.01.398Zm-4.324-4.276-1.699-4.443-1.949 4.443h3.648ZM190.289 57.152a9.147 9.147 0 0 1-5.377 2.277 4.965 4.965 0 0 1-5.125-5.093 5.766 5.766 0 0 1 3.137-5.18 6.976 6.976 0 0 1 3.613-.892 11.317 11.317 0 0 1 3.477.52v2.522h-.66a2.44 2.44 0 0 0-1.228-1.9 4.512 4.512 0 0 0-2.42-.617 4.038 4.038 0 0 0-3.243 1.404 4.743 4.743 0 0 0-1.089 3.171 4.897 4.897 0 0 0 1.217 3.371 4.373 4.373 0 0 0 3.463 1.472 7.234 7.234 0 0 0 4.234-1.577l.001.522ZM202.954 57.152a9.154 9.154 0 0 1-5.376 2.277 4.98 4.98 0 0 1-3.758-1.53 5.045 5.045 0 0 1-1.374-3.563 5.764 5.764 0 0 1 3.139-5.18 6.956 6.956 0 0 1 3.613-.892 11.336 11.336 0 0 1 3.475.52v2.523h-.655a2.44 2.44 0 0 0-1.229-1.901 4.524 4.524 0 0 0-2.419-.617 4.035 4.035 0 0 0-3.241 1.404 4.747 4.747 0 0 0-1.083 3.178 4.91 4.91 0 0 0 1.211 3.37 4.378 4.378 0 0 0 3.469 1.473 7.239 7.239 0 0 0 4.234-1.578l-.006.516ZM217.586 53.34a5.392 5.392 0 0 1-1.046 3.153 6.402 6.402 0 0 1-2.68 2.242 7.371 7.371 0 0 1-3.133.69 5.79 5.79 0 0 1-4.004-1.454 4.622 4.622 0 0 1-1.619-3.592 5.678 5.678 0 0 1 2.004-4.282 6.764 6.764 0 0 1 4.71-1.839 5.786 5.786 0 0 1 4.865 2.273c.609.805.927 1.793.902 2.802m-1.57 1.475c.006-1.007-.236-2-.705-2.892a5.02 5.02 0 0 0-2.173-2.193 5.372 5.372 0 0 0-2.477-.682 3.784 3.784 0 0 0-3.983 3.938 5.776 5.776 0 0 0 1.441 3.9 5.035 5.035 0 0 0 3.983 1.81 3.808 3.808 0 0 0 3.922-3.873M66.934 31.267V12.352h13.178V6.335h5.706v6.017h13.173v18.774h-5.706v-1.814h-7.467v10.782h-5.706V29.312h-7.47v1.955h-5.708Zm5.709-6.995h7.466v-6.875h-7.466v6.875Zm20.642-6.875h-7.467v6.875h7.467v-6.875ZM105.984 39.956V7.593h32.781v32.363H133.2v-1.674h-21.803v1.672l-5.413.002Zm5.413-5.742H133.2V12.08h-21.803v22.136Zm1.171-16.25V13.76h19.319v4.202h-7.46v2.243h6.874v4.202h-2.486a71.765 71.765 0 0 0 2.781 2.525l-1.602 1.258h2.192v4.35h-19.757v-4.352h6.886v-3.781h-6.012v-4.202h5.999v-2.242l-6.734.001Zm15.075 10.224a27.372 27.372 0 0 1-1.313-1.4l-.881-.842 1.762-1.54h-2.784v3.782h3.216ZM145.616 23.422c-.193-1.495-.727-4.156-1.601-7.984-.151-.65-.297-1.302-.439-1.955l3.363-.71c.197.936.441 2.243.732 3.929l.873 4.625V19.92c.096-2.055.145-4.111.147-6.169V6.61h4.822v7.568c.197-.282.539-.697 1.027-1.264.391-.563.684-.978.881-1.258l1.171 1.258V7.727h21.658v32.228h-4.832v-1.54h-11.993v1.54h-4.833v-6.44l-1.9 2.385-3.076-3.922a36.46 36.46 0 0 1-4.393 8.12 60.319 60.319 0 0 0-3.508-3.636 22.414 22.414 0 0 0 4.686-13.592l-2.785.553Zm7.174 3.509c.48.469 1.173 1.166 2.046 2.093.783.759 1.368 1.313 1.762 1.686V16.844a11.75 11.75 0 0 1-1.613 1.533 40.161 40.161 0 0 1-1.601 1.687 66.898 66.898 0 0 1-.588 6.867m9.366-5.892v-4.062h3.073c.096-1.302.146-2.615.146-3.923h4.386v3.923h2.932v4.062h-3.074a5.564 5.564 0 0 1-.292 1.827c.783.934 1.802 2.242 3.073 3.92.481.558.823.98 1.02 1.26v-15.97h-11.993v16.948a12.74 12.74 0 0 0 3.658-7.983l-2.929-.002Zm9.072 11.766c-1.167-1.68-2.338-3.355-3.506-5.04a25.689 25.689 0 0 1-3.811 5.605l-2.481-2.663v3.642h11.994V30.43l-2.196 2.375ZM183.341 12.914V8.712h9.079V6.47h5.125v2.242h7.018V6.47h5.125v2.242h8.925v4.202h-8.921v1.68h-5.124v-1.68h-7.018v1.68h-5.125v-1.68h-9.084Zm3.373 17.234v-14.85h28.544v14.853h-11.417v1.821h14.772v3.922h-14.776v4.057h-5.563v-4.052H183.34v-3.927h14.934v-1.823l-11.56-.001Zm5.413-9.11h17.713V19.08h-17.713v1.959Zm0 5.19h17.713v-1.964h-17.713v1.963Z"/><path fill="#017359" d="M30.15 18.42c-3.479 4.549-3.826 9.475-1.661 14.688.64 1.54 1.477 2.971 2.452 4.322 2.714 3.738 3.959 7.89 3.466 12.537-.008.075.044.156.117.395 4.79-4.393 6.21-9.997 6.232-16.157.335 0 .426.262.57.429 3.484 4.122 6.965 8.245 10.444 12.37.325.381.28.623.025 1-4.324 6.397-10.253 10.328-17.792 11.595-7.82 1.313-14.9-.607-21.096-5.61-5.239-4.233-8.412-9.79-9.505-16.471-1.302-7.955.564-15.163 5.522-21.472 4.176-5.313 9.656-8.53 16.247-9.64 7.848-1.322 14.935.598 21.195 5.582 2.245 1.787 3.999 3.927 4.413 6.91.662 4.76-2.048 10.316-7.694 11.236-5.988.976-10.275-2.276-11.186-8.378-.408-2.734.03-5.181 2.07-7.172.146-.143.373-.294.213-.522-.119-.17-.329-.033-.5.003-6.638 1.405-13.275 6.147-14.807 15.205-1.416 8.376 2.104 14.423 8.347 19.327.617.486 1.238.948 1.613 1.675.498.961.502 1.908-.033 2.852-.118.21-.276.403-.357.625-.117.317-.2.707.088.936.297.238.693.182 1.013-.035.4-.27.693-.656.986-1.043 1.426-1.876 1.56-4.043 1.493-6.294-.106-3.584-1.449-6.716-3.37-9.619-1.807-2.729-2.957-5.677-3.11-8.959-.17-3.636 1.112-6.755 3.558-9.399.326-.352.616-.737.923-1.108l.125.191Z"/></svg>
-                <!-- 平台名称 -->
-                <div style="font-size: 28px; color: #333;margin-left: 2px; font-weight:bold;">山东中烟生产制造智能管理一体化平台</div>
+    <!-- 顶部导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <div class="logo-container">
+                    <div class="logo">SD</div>
+                    <span>山东中烟生产制造智能管理一体化平台</span>
+                </div>
+            </a>
+            <div class="ms-auto">
+                <button class="btn btn-outline-light me-2" type="button">
+                    <i class="bi bi-person-circle me-1"></i> 管理员
+                </button>
+                <button class="btn btn-outline-light" type="button">
+                    <i class="bi bi-box-arrow-right"></i> 退出
+                </button>
             </div>
         </div>
-        <!-- 导航栏区域 -->
-        <div style="padding: 5px 15px; border-bottom: 2px solid #1890ff;background-color: #ffffff;">
-            <div style="display: flex; align-items: center;">
-                <!-- 开始页按钮（带首页图标） -->
-                <div style="display: flex; align-items: center; padding: 8px 15px; background-color: #f0f0f0; border-radius: 4px; margin-right: 10px; cursor: pointer;">
-                    <!-- 首页图标 -->
-                    <svg width="12" height="12" viewBox="0 0 12 12" style="margin-right: 20px;">
-                        <path d="M8.707 1.5a1 1 0 00-1.414 0L.646 8.146a.5.5 0 00.708.708L2 8.207V13.5A1.5 1.5 0 003.5 15h9a1.5 1.5 0 001.5-1.5V8.207l.646.647a.5.5 0 00.708-.708L13 5.793V2.5a.5.5 0 00-.5-.5h-1a.5.5 0 00-.5.5v1.293L8.707 1.5z" fill="#666"/>
-                    </svg>
-                    <span style="color: #666; font-size: 14px;">开始页</span>
-                </div>
-                <!-- 当前标签页按钮（浅蓝色底，深蓝色1px圆角外边框，右上角带X） -->
-                <div style="display: flex; align-items: center; padding: 8px 15px; background-color: #e6f7ff; border: 1px solid #1890ff; border-radius: 5px; cursor: pointer; position: relative;">
-                    <span style="color: #1890ff; font-size: 14px; font-weight: bold;">评价模型构建</span>
-                    <!-- 右上角X图标 -->
-                    <svg width="12" height="12" viewBox="0 0 16 16" style="position: absolute; top: 2px; right: 2px; cursor: pointer;">
-                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" fill="#1890ff"/>
-                    </svg>
-                </div>
-            </div>
-        </div>
-      <!-- 阮头部区域结束 -->
-
+    </nav>
     <div class="container main-container">
         <!-- 功能按钮区域 -->
         <div class="card">
             <div class="card-body">
                 <div class="d-flex justify-content-between align-items-center">
-                    <h5 class="mb-0">返回 ></h5>
+                    <h5 class="mb-0">评价模型管理</h5>
                     <div>
                         <button class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#addModelModal">
                             <i class="bi bi-plus-circle me-1"></i> 添加
@@ -665,7 +567,6 @@
                 </div>
             </div>
         </div>
-
         <!-- 数据表格区域 -->
         <div class="card">
             <div class="card-body p-0">
@@ -769,16 +670,204 @@
                                     </div>
                                 </td>
                             </tr>
+                            <tr>
+                                <td><input class="form-check-input" type="checkbox"></td>
+                                <td>MODEL_20250818_004</td>
+                                <td>设备运行稳定性评价模型</td>
+                                <td>稳定性评价</td>
+                                <td>设备D</td>
+                                <td>每日</td>
+                                <td><span class="badge status-badge status-active">启用</span></td>
+                                <td>2025-08-18</td>
+                                <td>2025-08-10</td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modelDetailModal">
+                                            <i class="bi bi-eye"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-success" data-bs-toggle="modal" data-bs-target="#executionModal">
+                                            <i class="bi bi-play-circle"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#analysisModal">
+                                            <i class="bi bi-graph-up"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-warning edit-btn" data-bs-toggle="modal" data-bs-target="#modelEditModal">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input class="form-check-input" type="checkbox"></td>
+                                <td>MODEL_20250817_005</td>
+                                <td>工艺参数优化评价模型</td>
+                                <td>优化评价</td>
+                                <td>工艺段E</td>
+                                <td>每周</td>
+                                <td><span class="badge status-badge status-active">启用</span></td>
+                                <td>2025-08-17</td>
+                                <td>2025-08-05</td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modelDetailModal">
+                                            <i class="bi bi-eye"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-success" data-bs-toggle="modal" data-bs-target="#executionModal">
+                                            <i class="bi bi-play-circle"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#analysisModal">
+                                            <i class="bi bi-graph-up"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-warning edit-btn" data-bs-toggle="modal" data-bs-target="#modelEditModal">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input class="form-check-input" type="checkbox"></td>
+                                <td>MODEL_20250816_006</td>
+                                <td>能源消耗评价模型</td>
+                                <td>能耗评价</td>
+                                <td>设备F</td>
+                                <td>每日</td>
+                                <td><span class="badge status-badge status-active">启用</span></td>
+                                <td>2025-08-16</td>
+                                <td>2025-08-01</td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modelDetailModal">
+                                            <i class="bi bi-eye"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-success" data-bs-toggle="modal" data-bs-target="#executionModal">
+                                            <i class="bi bi-play-circle"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#analysisModal">
+                                            <i class="bi bi-graph-up"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-warning edit-btn" data-bs-toggle="modal" data-bs-target="#modelEditModal">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input class="form-check-input" type="checkbox"></td>
+                                <td>MODEL_20250815_007</td>
+                                <td>安全风险评价模型</td>
+                                <td>安全评价</td>
+                                <td>工艺段G</td>
+                                <td>每月</td>
+                                <td><span class="badge status-badge status-draft">草稿</span></td>
+                                <td>2025-08-30</td>
+                                <td>2025-07-28</td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modelDetailModal">
+                                            <i class="bi bi-eye"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-success" data-bs-toggle="modal" data-bs-target="#executionModal">
+                                            <i class="bi bi-play-circle"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#analysisModal">
+                                            <i class="bi bi-graph-up"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-warning edit-btn" data-bs-toggle="modal" data-bs-target="#modelEditModal">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input class="form-check-input" type="checkbox"></td>
+                                <td>MODEL_20250814_008</td>
+                                <td>设备维护评价模型</td>
+                                <td>维护评价</td>
+                                <td>设备H</td>
+                                <td>每周</td>
+                                <td><span class="badge status-badge status-active">启用</span></td>
+                                <td>2025-08-14</td>
+                                <td>2025-07-20</td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modelDetailModal">
+                                            <i class="bi bi-eye"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-success" data-bs-toggle="modal" data-bs-target="#executionModal">
+                                            <i class="bi bi-play-circle"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#analysisModal">
+                                            <i class="bi bi-graph-up"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-warning edit-btn" data-bs-toggle="modal" data-bs-target="#modelEditModal">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input class="form-check-input" type="checkbox"></td>
+                                <td>MODEL_20250813_009</td>
+                                <td>生产节拍评价模型</td>
+                                <td>节拍评价</td>
+                                <td>机型I</td>
+                                <td>每日</td>
+                                <td><span class="badge status-badge status-active">启用</span></td>
+                                <td>2025-08-13</td>
+                                <td>2025-07-15</td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modelDetailModal">
+                                            <i class="bi bi-eye"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-success" data-bs-toggle="modal" data-bs-target="#executionModal">
+                                            <i class="bi bi-play-circle"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#analysisModal">
+                                            <i class="bi bi-graph-up"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-warning edit-btn" data-bs-toggle="modal" data-bs-target="#modelEditModal">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input class="form-check-input" type="checkbox"></td>
+                                <td>MODEL_20250812_010</td>
+                                <td>环境指标评价模型</td>
+                                <td>环境评价</td>
+                                <td>工艺段J</td>
+                                <td>每月</td>
+                                <td><span class="badge status-badge status-inactive">禁用</span></td>
+                                <td>2025-08-12</td>
+                                <td>2025-07-10</td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modelDetailModal">
+                                            <i class="bi bi-eye"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-success" data-bs-toggle="modal" data-bs-target="#executionModal">
+                                            <i class="bi bi-play-circle"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#analysisModal">
+                                            <i class="bi bi-graph-up"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-warning edit-btn" data-bs-toggle="modal" data-bs-target="#modelEditModal">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
-
         <!-- 分页区域 -->
         <div class="d-flex justify-content-between align-items-center">
             <div>
-                <span>显示 1 到 3 条，共 3 条记录</span>
+                <span>显示 1 到 10 条，共 10 条记录</span>
             </div>
             <nav aria-label="Page navigation">
                 <ul class="pagination">
@@ -795,7 +884,6 @@
             </nav>
         </div>
     </div>
-
     <!-- 模型详情模态框 -->
     <div class="modal fade" id="modelDetailModal" tabindex="-1" aria-labelledby="modelDetailModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl">
@@ -874,7 +962,6 @@
                                 </div>
                             </div>
                         </div>
-                        
                         <!-- 参数设置 -->
                         <div class="tab-pane fade" id="params" role="tabpanel" aria-labelledby="params-tab">
                             <div class="d-flex justify-content-between align-items-center mb-3">
@@ -937,7 +1024,6 @@
                                 </table>
                             </div>
                         </div>
-                        
                         <!-- 要求定义 -->
                         <div class="tab-pane fade" id="requirements" role="tabpanel" aria-labelledby="requirements-tab">
                             <div class="d-flex justify-content-between align-items-center mb-3">
@@ -992,7 +1078,6 @@
                                 </table>
                             </div>
                         </div>
-                        
                         <!-- 预期结果 -->
                         <div class="tab-pane fade" id="results" role="tabpanel" aria-labelledby="results-tab">
                             <div class="row">
@@ -1022,7 +1107,6 @@
                                     <input type="number" class="form-control" value="100" readonly>
                                 </div>
                             </div>
-                            
                             <div class="mt-4">
                                 <h6>等级定义</h6>
                                 <div class="table-responsive">
@@ -1077,7 +1161,6 @@
                                 </div>
                             </div>
                         </div>
-                        
                         <!-- 适用对象 -->
                         <div class="tab-pane fade" id="objects" role="tabpanel" aria-labelledby="objects-tab">
                             <div class="row">
@@ -1113,7 +1196,6 @@
                                 </div>
                             </div>
                         </div>
-                        
                         <!-- 数据来源 -->
                         <div class="tab-pane fade" id="sources" role="tabpanel" aria-labelledby="sources-tab">
                             <div class="row">
@@ -1143,7 +1225,6 @@
                                     </select>
                                 </div>
                             </div>
-                            
                             <div class="mt-4">
                                 <h6>数据映射</h6>
                                 <div class="table-responsive">
@@ -1197,7 +1278,6 @@
             </div>
         </div>
     </div>
-
     <!-- 模型编辑模态框 -->
     <div class="modal fade" id="modelEditModal" tabindex="-1" aria-labelledby="modelEditModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl">
@@ -1276,7 +1356,6 @@
                                 </div>
                             </div>
                         </div>
-                        
                         <!-- 参数设置 -->
                         <div class="tab-pane fade" id="edit-params" role="tabpanel" aria-labelledby="edit-params-tab">
                             <div class="d-flex justify-content-between align-items-center mb-3">
@@ -1339,7 +1418,6 @@
                                 </table>
                             </div>
                         </div>
-                        
                         <!-- 要求定义 -->
                         <div class="tab-pane fade" id="edit-requirements" role="tabpanel" aria-labelledby="edit-requirements-tab">
                             <div class="d-flex justify-content-between align-items-center mb-3">
@@ -1394,7 +1472,6 @@
                                 </table>
                             </div>
                         </div>
-                        
                         <!-- 预期结果 -->
                         <div class="tab-pane fade" id="edit-results" role="tabpanel" aria-labelledby="edit-results-tab">
                             <div class="row">
@@ -1424,7 +1501,6 @@
                                     <input type="number" class="form-control" value="100">
                                 </div>
                             </div>
-                            
                             <div class="mt-4">
                                 <h6>等级定义</h6>
                                 <div class="table-responsive">
@@ -1479,7 +1555,6 @@
                                 </div>
                             </div>
                         </div>
-                        
                         <!-- 适用对象 -->
                         <div class="tab-pane fade" id="edit-objects" role="tabpanel" aria-labelledby="edit-objects-tab">
                             <div class="row">
@@ -1515,7 +1590,6 @@
                                 </div>
                             </div>
                         </div>
-                        
                         <!-- 数据来源 -->
                         <div class="tab-pane fade" id="edit-sources" role="tabpanel" aria-labelledby="edit-sources-tab">
                             <div class="row">
@@ -1545,7 +1619,6 @@
                                     </select>
                                 </div>
                             </div>
-                            
                             <div class="mt-4">
                                 <h6>数据映射</h6>
                                 <div class="table-responsive">
@@ -1600,7 +1673,6 @@
             </div>
         </div>
     </div>
-
     <!-- 模型执行模态框 -->
     <div class="modal fade" id="executionModal" tabindex="-1" aria-labelledby="executionModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
@@ -1625,7 +1697,6 @@
                             </div>
                         </div>
                     </div>
-                    
                     <h6>参数详情</h6>
                     <div class="table-responsive">
                         <table class="table table-bordered">
@@ -1663,7 +1734,6 @@
                             </tbody>
                         </table>
                     </div>
-                    
                     <h6>评价建议</h6>
                     <div class="alert alert-info">
                         <i class="bi bi-info-circle me-2"></i> 设备预热状态良好，各项参数均在正常范围内，建议继续保持当前运行参数。
@@ -1676,7 +1746,6 @@
             </div>
         </div>
     </div>
-
     <!-- 模型分析模态框 -->
     <div class="modal fade" id="analysisModal" tabindex="-1" aria-labelledby="analysisModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl">
@@ -1726,13 +1795,11 @@
                                     </div>
                                 </div>
                             </div>
-                            
                             <h6>得分趋势图</h6>
                             <div class="chart-container">
                                 <canvas id="trendChart"></canvas>
                             </div>
                         </div>
-                        
                         <!-- 对比分析 -->
                         <div class="tab-pane fade" id="compare" role="tabpanel" aria-labelledby="compare-tab">
                             <div class="row mb-3">
@@ -1755,13 +1822,11 @@
                                     </select>
                                 </div>
                             </div>
-                            
                             <h6>对比分析图</h6>
                             <div class="chart-container">
                                 <canvas id="compareChart"></canvas>
                             </div>
                         </div>
-                        
                         <!-- 相关性分析 -->
                         <div class="tab-pane fade" id="correlation" role="tabpanel" aria-labelledby="correlation-tab">
                             <div class="row mb-3">
@@ -1783,12 +1848,10 @@
                                     </select>
                                 </div>
                             </div>
-                            
                             <h6>参数与得分相关性</h6>
                             <div class="chart-container">
                                 <canvas id="correlationChart"></canvas>
                             </div>
-                            
                             <div class="mt-3">
                                 <div class="alert alert-info">
                                     <i class="bi bi-info-circle me-2"></i> 温度与评价得分的相关系数为 0.78，呈较强正相关关系。
@@ -1804,7 +1867,6 @@
             </div>
         </div>
     </div>
-
     <!-- 添加模型模态框 - 逐步展示 -->
     <div class="modal fade" id="addModelModal" tabindex="-1" aria-labelledby="addModelModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl">
@@ -1837,17 +1899,14 @@
                             <div class="step-title">预期结果</div>
                         </div>
                     </div>
-                    
                     <!-- 步骤进度条 -->
                     <div class="step-progress">
                         <div class="step-progress-bar" id="stepProgressBar" style="width: 20%;"></div>
                     </div>
-                    
                     <!-- 步骤内容 -->
                     <div id="stepContentContainer">
                         <!-- 步骤内容将通过JavaScript动态加载 -->
                     </div>
-                    
                     <!-- 步骤导航按钮 -->
                     <div class="step-navigation">
                         <button type="button" class="btn btn-secondary" id="prevBtn" style="display: none;">上一步</button>
@@ -1858,20 +1917,17 @@
             </div>
         </div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // 全选功能
             const selectAllCheckbox = document.getElementById('selectAll');
             const rowCheckboxes = document.querySelectorAll('tbody input[type="checkbox"]');
-            
             selectAllCheckbox.addEventListener('change', function() {
                 rowCheckboxes.forEach(checkbox => {
                     checkbox.checked = selectAllCheckbox.checked;
                 });
             });
-            
             // 模型详情模态框打开时设置第一个标签页为活动状态
             const modelDetailModal = document.getElementById('modelDetailModal');
             modelDetailModal.addEventListener('shown.bs.modal', function() {
@@ -1880,7 +1936,6 @@
                     firstTab.click();
                 }
             });
-            
             // 模型编辑模态框打开时设置第一个标签页为活动状态
             const modelEditModal = document.getElementById('modelEditModal');
             modelEditModal.addEventListener('shown.bs.modal', function() {
@@ -1889,7 +1944,6 @@
                     firstTab.click();
                 }
             });
-            
             // 模型分析模态框打开时设置第一个标签页为活动状态
             const analysisModal = document.getElementById('analysisModal');
             analysisModal.addEventListener('shown.bs.modal', function() {
@@ -1897,13 +1951,11 @@
                 if (firstTab && !firstTab.classList.contains('active')) {
                     firstTab.click();
                 }
-                
                 // 初始化图表
                 initTrendChart();
                 initCompareChart();
                 initCorrelationChart();
             });
-            
             // 初始化趋势图
             function initTrendChart() {
                 const ctx = document.getElementById('trendChart').getContext('2d');
@@ -1933,7 +1985,6 @@
                     }
                 });
             }
-            
             // 初始化对比图
             function initCompareChart() {
                 const ctx = document.getElementById('compareChart').getContext('2d');
@@ -1967,7 +2018,6 @@
                     }
                 });
             }
-            
             // 初始化相关性图
             function initCorrelationChart() {
                 const ctx = document.getElementById('correlationChart').getContext('2d');
@@ -2012,42 +2062,33 @@
                     }
                 });
             }
-            
             // 添加模型步骤化功能
             let currentStep = 1;
             const totalSteps = 5;
-            
             // 步骤导航按钮
             const prevBtn = document.getElementById('prevBtn');
             const nextBtn = document.getElementById('nextBtn');
             const saveBtn = document.getElementById('saveBtn');
-            
             // 步骤内容容器
             const stepContentContainer = document.getElementById('stepContentContainer');
-            
             // 步骤进度条
             const stepProgressBar = document.getElementById('stepProgressBar');
-            
             // 步骤内容模板
             const stepTemplates = {
                 1: `
-                    <div class="step-title-container">
-                        <div class="step-number">1</div>
-                        <div class="step-title-text">添加模型</div>
-                    </div>
                     <div class="step-description">
                         请填写模型的基本信息，包括模型名称、类型和评价周期等。
                     </div>
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label class="form-label">模型名称 <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" id="modelName" placeholder="请输入模型名称">
+                            <input type="text" class="form-control" id="modelName" placeholder="请输入模型名称" value="设备预热评价模型">
                         </div>
                         <div class="col-md-6 mb-3">
                             <label class="form-label">模型类型 <span class="text-danger">*</span></label>
                             <select class="form-select" id="modelType">
                                 <option value="">请选择模型类型</option>
-                                <option value="预热评价">预热评价</option>
+                                <option value="预热评价" selected>预热评价</option>
                                 <option value="质量评价">质量评价</option>
                                 <option value="效率评价">效率评价</option>
                                 <option value="安全评价">安全评价</option>
@@ -2057,7 +2098,7 @@
                             <label class="form-label">评价周期 <span class="text-danger">*</span></label>
                             <select class="form-select" id="evaluationCycle">
                                 <option value="">请选择评价周期</option>
-                                <option value="每日">每日</option>
+                                <option value="每日" selected>每日</option>
                                 <option value="每周">每周</option>
                                 <option value="每月">每月</option>
                                 <option value="每季度">每季度</option>
@@ -2067,30 +2108,28 @@
                         <div class="col-md-6 mb-3">
                             <label class="form-label">状态</label>
                             <select class="form-select" id="status">
-                                <option value="启用">启用</option>
+                                <option value="启用" selected>启用</option>
                                 <option value="禁用">禁用</option>
                                 <option value="草稿">草稿</option>
                             </select>
                         </div>
                         <div class="col-md-6 mb-3">
                             <label class="form-label">生效时间</label>
-                            <input type="date" class="form-control" id="effectiveTime">
+                            <input type="date" class="form-control" id="effectiveTime" value="2025-08-21">
                         </div>
                         <div class="col-12 mb-3">
                             <label class="form-label">模型描述</label>
-                            <textarea class="form-control" id="description" rows="3" placeholder="请输入模型描述"></textarea>
+                            <textarea class="form-control" id="description" rows="3" placeholder="请输入模型描述">用于评价设备预热阶段的各项参数，确保设备在正常工作温度范围内运行。</textarea>
                         </div>
                     </div>
                 `,
                 2: `
-                    <div class="step-title-container">
-                        <div class="step-number">2</div>
-                        <div class="step-title-text">参数设置及数据来源</div>
-                    </div>
                     <div class="step-description">
                         请设置评价模型的参数，包括参数名称、类型、单位和范围等，并配置数据来源。
                     </div>
-                    <h6>参数设置 <span class="text-danger">*</span></h6>
+                   <h6 style="border-left: 3px solid #007bff; padding-left: 8px; font-weight: bold;">
+    参数设置 <span class="text-danger">*</span>
+</h6>
                     <div class="d-flex justify-content-between align-items-center mb-3">
                         <div></div>
                         <button class="btn btn-sm btn-primary" id="addParamBtn">
@@ -2115,14 +2154,18 @@
                             </tbody>
                         </table>
                     </div>
-                    
-                    <h6 class="mt-4">数据来源</h6>
+                    <!-- 灰色线条 -->
+<div style="height: 10px; background-color: #e9ecef;"></div>
+<!-- 原有标题 -->
+<h6 class="border-start border-3 border-primary ps-2 fw-bold" style="margin-top: 15px;">
+    数据来源 <span class="text-danger">*</span>
+</h6>
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label class="form-label">来源系统</label>
                             <select class="form-select" id="sourceSystem">
                                 <option value="">请选择来源系统</option>
-                                <option value="MES">MES</option>
+                                <option value="MES" selected>MES</option>
                                 <option value="ERP">ERP</option>
                                 <option value="SCADA">SCADA</option>
                                 <option value="其他">其他</option>
@@ -2132,7 +2175,7 @@
                             <label class="form-label">采集方式</label>
                             <select class="form-select" id="collectionMethod">
                                 <option value="">请选择采集方式</option>
-                                <option value="自动采集">自动采集</option>
+                                <option value="自动采集" selected>自动采集</option>
                                 <option value="手动录入">手动录入</option>
                             </select>
                         </div>
@@ -2141,15 +2184,19 @@
                             <select class="form-select" id="updateFrequency">
                                 <option value="">请选择更新频率</option>
                                 <option value="实时">实时</option>
-                                <option value="每小时">每小时</option>
+                                <option value="每小时" selected>每小时</option>
                                 <option value="每天">每天</option>
                                 <option value="每周">每周</option>
                             </select>
                         </div>
                     </div>
-                    
                     <div class="mt-4">
-                        <h6>数据映射</h6>
+                                        <!-- 灰色线条 -->
+<div style="height: 10px; background-color: #e9ecef;"></div>
+<!-- 原有标题 -->
+<h6 class="border-start border-3 border-primary ps-2 fw-bold" style="margin-top: 15px;">
+    数据映射 <span class="text-danger">*</span>
+</h6>
                         <div class="d-flex justify-content-between align-items-center mb-3">
                             <div></div>
                             <button class="btn btn-sm btn-primary" id="addMappingBtn">
@@ -2160,6 +2207,7 @@
                             <table class="table table-bordered source-table">
                                 <thead>
                                     <tr>
+                                        <th>来源系统</th>
                                         <th>参数名称</th>
                                         <th>系统字段名</th>
                                         <th>映射关系</th>
@@ -2174,10 +2222,6 @@
                     </div>
                 `,
                 3: `
-                    <div class="step-title-container">
-                        <div class="step-number">3</div>
-                        <div class="step-title-text">适用对象</div>
-                    </div>
                     <div class="step-description">
                         请选择此评价模型适用的对象，可以是设备、机型或工艺段。
                     </div>
@@ -2186,7 +2230,7 @@
                             <label class="form-label">对象类型 <span class="text-danger">*</span></label>
                             <select class="form-select" id="objectType">
                                 <option value="">请选择对象类型</option>
-                                <option value="设备">设备</option>
+                                <option value="设备" selected>设备</option>
                                 <option value="机型">机型</option>
                                 <option value="工艺段">工艺段</option>
                             </select>
@@ -2216,14 +2260,13 @@
                     </div>
                 `,
                 4: `
-                    <div class="step-title-container">
-                        <div class="step-number">4</div>
-                        <div class="step-title-text">要求定义</div>
-                    </div>
                     <div class="step-description">
                         请定义评价模型的要求，包括要求名称、描述、条件和权重等。
                     </div>
-                    <h6>要求定义 <span class="text-danger">*</span></h6>
+<!-- 原有标题 -->
+<h6 class="border-start border-3 border-primary ps-2 fw-bold" style="margin-top: 15px;">
+    要求定义 <span class="text-danger">*</span>
+</h6>
                     <div class="d-flex justify-content-between align-items-center mb-3">
                         <div></div>
                         <button class="btn btn-sm btn-primary" id="addRequirementBtn">
@@ -2248,20 +2291,18 @@
                     </div>
                 `,
                 5: `
-                    <div class="step-title-container">
-                        <div class="step-number">5</div>
-                        <div class="step-title-text">预期结果</div>
-                    </div>
                     <div class="step-description">
                         请设置评价模型的预期结果，包括结果类型、计算方式和等级定义等。
                     </div>
-                    <h6>预期结果设置</h6>
+                    <h6 class="border-start border-3 border-primary ps-2 fw-bold" style="margin-top: 15px;">
+    预期结果设置 <span class="text-danger">*</span>
+</h6>
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label class="form-label">结果类型 <span class="text-danger">*</span></label>
                             <select class="form-select" id="resultType">
                                 <option value="">请选择结果类型</option>
-                                <option value="评分">评分</option>
+                                <option value="评分" selected>评分</option>
                                 <option value="等级">等级</option>
                                 <option value="通过/不通过">通过/不通过</option>
                             </select>
@@ -2270,7 +2311,7 @@
                             <label class="form-label">计算方式 <span class="text-danger">*</span></label>
                             <select class="form-select" id="calculationMethod">
                                 <option value="">请选择计算方式</option>
-                                <option value="加权平均">加权平均</option>
+                                <option value="加权平均" selected>加权平均</option>
                                 <option value="最大值">最大值</option>
                                 <option value="最小值">最小值</option>
                                 <option value="自定义公式">自定义公式</option>
@@ -2285,10 +2326,10 @@
                             <input type="number" class="form-control" id="maxResult" value="100">
                         </div>
                     </div>
-                    
                     <div class="mt-4">
-                        <h6>等级定义</h6>
-                        <div class="d-flex justify-content-between align-items-center mb-3">
+<h6 class="border-start border-3 border-primary ps-2 fw-bold" style="margin-top: 15px;">
+    等级定义 <span class="text-danger">*</span>
+</h6>                        <div class="d-flex justify-content-between align-items-center mb-3">
                             <div></div>
                             <button class="btn btn-sm btn-primary" id="addLevelBtn">
                                 <i class="bi bi-plus-circle me-1"></i> 添加等级
@@ -2312,23 +2353,50 @@
                     </div>
                 `
             };
-            
-            // 初始化第一步
-            loadStep(1);
-            
+            // 更新步骤指示器
+            function updateStepIndicators() {
+                for (let i = 1; i <= totalSteps; i++) {
+                    const indicator = document.getElementById(`step${i}-indicator`);
+                    if (i < currentStep) {
+                        indicator.classList.add('completed');
+                        indicator.classList.remove('active');
+                    } else if (i === currentStep) {
+                        indicator.classList.add('active');
+                        indicator.classList.remove('completed');
+                    } else {
+                        indicator.classList.remove('active', 'completed');
+                    }
+                }
+            }
+            // 更新导航按钮
+            function updateNavigationButtons() {
+                if (currentStep === 1) {
+                    prevBtn.style.display = 'none';
+                } else {
+                    prevBtn.style.display = 'block';
+                }
+                if (currentStep === totalSteps) {
+                    nextBtn.style.display = 'none';
+                    saveBtn.style.display = 'block';
+                } else {
+                    nextBtn.style.display = 'block';
+                    saveBtn.style.display = 'none';
+                }
+            }
             // 加载步骤内容
             function loadStep(step) {
                 // 更新步骤内容
                 stepContentContainer.innerHTML = stepTemplates[step];
-                
                 // 重新绑定事件
                 bindStepEvents(step);
-                
                 // 更新进度条
                 const progress = (step / totalSteps) * 100;
                 stepProgressBar.style.width = progress + '%';
+                // 更新步骤指示器
+                updateStepIndicators();
+                // 更新导航按钮
+                updateNavigationButtons();
             }
-            
             // 绑定步骤事件
             function bindStepEvents(step) {
                 // 步骤2的事件
@@ -2339,88 +2407,91 @@
                         addParamBtn.addEventListener('click', function() {
                             const tableBody = document.getElementById('paramTableBody');
                             const row = document.createElement('tr');
-                            
                             row.innerHTML = `
-                                <td><input type="text" class="form-control form-control-sm" placeholder="参数名称"></td>
+                                <td><input type="text" class="form-control form-control-sm param-name-input" placeholder="参数名称" value="温度"></td>
                                 <td>
                                     <select class="form-select form-select-sm">
-                                        <option>数值型</option>
-                                        <option>布尔型</option>
-                                        <option>枚举型</option>
-                                        <option>文本型</option>
+                                        <option value="数值型" selected>数值型</option>
+                                        <option>布尔型">布尔型</option>
+                                        <option>枚举型">枚举型</option>
+                                        <option>文本型">文本型</option>
                                     </select>
                                 </td>
-                                <td><input type="text" class="form-control form-control-sm" placeholder="单位"></td>
-                                <td><input type="text" class="form-control form-control-sm" placeholder="范围"></td>
+                                <td><input type="text" class="form-control form-control-sm" placeholder="单位" value="℃"></td>
+                                <td><input type="text" class="form-control form-control-sm" placeholder="范围" value="20-100"></td>
                                 <td>
                                     <select class="form-select form-select-sm">
-                                        <option>自动采集</option>
-                                        <option>手动录入</option>
+                                        <option value="自动采集" selected>自动采集</option>
+                                        <option>手动录入">手动录入</option>
                                     </select>
                                 </td>
-                                <td><input type="number" class="form-control form-control-sm" placeholder="权重" min="0" max="1" step="0.1"></td>
+                                <td><input type="number" class="form-control form-control-sm" placeholder="权重" min="0" max="1" step="0.1" value="0.4"></td>
                                 <td>
                                     <button class="btn btn-sm btn-outline-danger delete-param-btn"><i class="bi bi-trash"></i></button>
                                 </td>
                             `;
-                            
                             tableBody.appendChild(row);
-                            
                             // 添加删除按钮事件
                             row.querySelector('.delete-param-btn').addEventListener('click', function() {
                                 row.remove();
+                                // 删除参数后更新映射表中的参数选项
+                                updateParamSelects();
                             });
+                            // 为参数名称输入框添加事件监听，当参数名称变化时更新映射表
+                            const paramNameInput = row.querySelector('.param-name-input');
+                            paramNameInput.addEventListener('input', function() {
+                                updateParamSelects();
+                            });
+                            // 添加新行后立即更新映射表
+                            updateParamSelects();
                         });
                     }
-                    
                     // 添加映射行
                     const addMappingBtn = document.getElementById('addMappingBtn');
                     if (addMappingBtn) {
                         addMappingBtn.addEventListener('click', function() {
                             const tableBody = document.getElementById('mappingTableBody');
                             const row = document.createElement('tr');
-                            
                             row.innerHTML = `
+                                <td>
+                                    <select class="form-select form-select-sm source-system-select">
+                                        <option value="">选择来源系统</option>
+                                        <!-- 选项将由JavaScript动态填充 -->
+                                    </select>
+                                </td>
                                 <td>
                                     <select class="form-select form-select-sm mapping-param-select">
                                         <option value="">选择参数</option>
                                     </select>
                                 </td>
-                                <td><input type="text" class="form-control form-control-sm" placeholder="系统字段名"></td>
+                                <td>
+                                    <select class="form-select form-select-sm system-field-select">
+                                        <option value="">选择系统字段</option>
+                                        <!-- 选项将由JavaScript根据来源系统动态填充 -->
+                                    </select>
+                                </td>
                                 <td>
                                     <select class="form-select form-select-sm">
-                                        <option>直接映射</option>
-                                        <option>计算转换</option>
+                                        <option value="直接映射" selected>直接映射</option>
+                                        <option value="计算转换">计算转换</option>
                                     </select>
                                 </td>
                                 <td>
                                     <button class="btn btn-sm btn-outline-danger delete-mapping-btn"><i class="bi bi-trash"></i></button>
                                 </td>
                             `;
-                            
                             tableBody.appendChild(row);
-                            
                             // 更新参数选择下拉框
                             updateParamSelects();
-                            
+                            // 初始化来源系统下拉框
+                            initializeSourceSystemSelects();
                             // 添加删除按钮事件
                             row.querySelector('.delete-mapping-btn').addEventListener('click', function() {
                                 row.remove();
                             });
                         });
                     }
-                    
-                    // 监听参数名称变化
-                    const paramTableBody = document.getElementById('paramTableBody');
-                    if (paramTableBody) {
-                        paramTableBody.addEventListener('input', function(e) {
-                            if (e.target.placeholder === '参数名称') {
-                                updateParamSelects();
-                            }
-                        });
-                    }
                 }
-                
                 // 步骤3的事件
                 if (step === 3) {
                     // 添加对象
@@ -2429,7 +2500,6 @@
                         addObjectBtn.addEventListener('click', function() {
                             const availableSelect = document.getElementById('availableObjects');
                             const selectedSelect = document.getElementById('selectedObjects');
-                            
                             if (availableSelect.selectedIndex >= 0) {
                                 const option = availableSelect.options[availableSelect.selectedIndex];
                                 const newOption = document.createElement('option');
@@ -2440,14 +2510,12 @@
                             }
                         });
                     }
-                    
                     // 移除对象
                     const removeObjectBtn = document.getElementById('removeObjectBtn');
                     if (removeObjectBtn) {
                         removeObjectBtn.addEventListener('click', function() {
                             const availableSelect = document.getElementById('availableObjects');
                             const selectedSelect = document.getElementById('selectedObjects');
-                            
                             if (selectedSelect.selectedIndex >= 0) {
                                 const option = selectedSelect.options[selectedSelect.selectedIndex];
                                 const newOption = document.createElement('option');
@@ -2459,7 +2527,6 @@
                         });
                     }
                 }
-                
                 // 步骤4的事件
                 if (step === 4) {
                     // 添加要求行
@@ -2468,19 +2535,16 @@
                         addRequirementBtn.addEventListener('click', function() {
                             const tableBody = document.getElementById('requirementTableBody');
                             const row = document.createElement('tr');
-                            
                             row.innerHTML = `
-                                <td><input type="text" class="form-control form-control-sm" placeholder="要求名称"></td>
-                                <td><input type="text" class="form-control form-control-sm" placeholder="要求描述"></td>
-                                <td><input type="text" class="form-control form-control-sm" placeholder="要求条件"></td>
-                                <td><input type="number" class="form-control form-control-sm" placeholder="权重" min="0" max="1" step="0.1"></td>
+                                <td><input type="text" class="form-control form-control-sm" placeholder="要求名称" value="温度稳定性要求"></td>
+                                <td><input type="text" class="form-control form-control-sm" placeholder="要求描述" value="设备预热过程中温度应保持稳定"></td>
+                                <td><input type="text" class="form-control form-control-sm" placeholder="要求条件" value="温度波动不超过±5℃"></td>
+                                <td><input type="number" class="form-control form-control-sm" placeholder="权重" min="0" max="1" step="0.1" value="0.5"></td>
                                 <td>
                                     <button class="btn btn-sm btn-outline-danger delete-requirement-btn"><i class="bi bi-trash"></i></button>
                                 </td>
                             `;
-                            
                             tableBody.appendChild(row);
-                            
                             // 添加删除按钮事件
                             row.querySelector('.delete-requirement-btn').addEventListener('click', function() {
                                 row.remove();
@@ -2488,7 +2552,6 @@
                         });
                     }
                 }
-                
                 // 步骤5的事件
                 if (step === 5) {
                     // 添加等级行
@@ -2497,13 +2560,12 @@
                         addLevelBtn.addEventListener('click', function() {
                             const tableBody = document.getElementById('levelTableBody');
                             const row = document.createElement('tr');
-                            
                             row.innerHTML = `
-                                <td><input type="text" class="form-control form-control-sm" placeholder="等级"></td>
-                                <td><input type="text" class="form-control form-control-sm" placeholder="范围"></td>
+                                <td><input type="text" class="form-control form-control-sm" placeholder="等级" value="A"></td>
+                                <td><input type="text" class="form-control form-control-sm" placeholder="范围" value="90-100"></td>
                                 <td>
                                     <select class="form-select form-select-sm">
-                                        <option value="绿色">绿色</option>
+                                        <option value="绿色" selected>绿色</option>
                                         <option value="蓝色">蓝色</option>
                                         <option value="黄色">黄色</option>
                                         <option value="红色">红色</option>
@@ -2513,9 +2575,7 @@
                                     <button class="btn btn-sm btn-outline-danger delete-level-btn"><i class="bi bi-trash"></i></button>
                                 </td>
                             `;
-                            
                             tableBody.appendChild(row);
-                            
                             // 添加删除按钮事件
                             row.querySelector('.delete-level-btn').addEventListener('click', function() {
                                 row.remove();
@@ -2524,275 +2584,117 @@
                     }
                 }
             }
-            
             // 更新参数选择下拉框
             function updateParamSelects() {
-                const paramNames = [];
-                document.querySelectorAll('#paramTableBody tr').forEach(row => {
-                    const nameInput = row.querySelector('input[placeholder="参数名称"]');
-                    if (nameInput && nameInput.value) {
-                        paramNames.push(nameInput.value);
-                    }
-                });
-                
-                document.querySelectorAll('.mapping-param-select').forEach(select => {
-                    const currentValue = select.value;
+                const paramInputs = document.querySelectorAll('.param-name-input');
+                const paramNames = Array.from(paramInputs).map(input => input.value).filter(name => name.trim() !== '');
+                const mappingSelects = document.querySelectorAll('.mapping-param-select');
+                mappingSelects.forEach(select => {
+                    // 保存当前选中的值
+                    const selectedValue = select.value;
+                    // 清空选项
                     select.innerHTML = '<option value="">选择参数</option>';
-                    
+                    // 添加新的参数选项
                     paramNames.forEach(name => {
                         const option = document.createElement('option');
                         option.value = name;
                         option.textContent = name;
-                        if (name === currentValue) {
-                            option.selected = true;
-                        }
                         select.appendChild(option);
+                    });
+                    // 恢复选中的值（如果存在）
+                    if (selectedValue && paramNames.includes(selectedValue)) {
+                        select.value = selectedValue;
+                    }
+                });
+            }
+            // --- 新增代码开始 ---
+            // 定义一个模拟的系统字段映射关系
+            // 在真实项目中，这应该由后端API提供
+            const fieldMapping = {
+                'MES': ['temp', 'speed', 'pressure', 'status'],
+                'ERP': ['order_id', 'material_code', 'batch_number'],
+                'SCADA': ['scada_temp', 'scada_speed', 'scada_pressure', 'alarm_code'],
+                '其他': ['field_1', 'field_2', 'field_3']
+            };
+            // 初始化函数：填充所有“来源系统”下拉框的选项
+            function initializeSourceSystemSelects() {
+                // 获取“数据来源”区域的主“来源系统”选择框的选项
+                const mainSourceSystemSelect = document.getElementById('sourceSystem');
+                const availableOptions = Array.from(mainSourceSystemSelect.options).map(opt => ({
+                    value: opt.value,
+                    text: opt.textContent
+                }));
+                // 获取所有“数据映射”表格中的“来源系统”下拉框
+                const sourceSystemSelects = document.querySelectorAll('.source-system-select');
+                // 为每个下拉框填充选项
+                sourceSystemSelects.forEach(select => {
+                    // 清空现有选项
+                    select.innerHTML = '<option value="">选择来源系统</option>';
+                    // 添加新选项
+                    availableOptions.forEach(option => {
+                        if (option.value) { // 跳过空值选项
+                            const newOption = document.createElement('option');
+                            newOption.value = option.value;
+                            newOption.textContent = option.text;
+                            select.appendChild(newOption);
+                        }
+                    });
+                    // 为这个下拉框绑定 change 事件
+                    select.addEventListener('change', function() {
+                        const selectedSystem = this.value;
+                        const systemFieldSelect = this.closest('tr').querySelector('.system-field-select');
+                        populateSystemFieldSelect(systemFieldSelect, selectedSystem);
                     });
                 });
             }
-            
-            // 步骤切换函数
-            function showStep(step) {
-                // 更新步骤指示器
-                document.querySelectorAll('.step-wizard .step').forEach((indicator, index) => {
-                    if (index + 1 < step) {
-                        indicator.classList.add('completed');
-                        indicator.classList.remove('active');
-                    } else if (index + 1 === step) {
-                        indicator.classList.add('active');
-                        indicator.classList.remove('completed');
-                    } else {
-                        indicator.classList.remove('active', 'completed');
-                    }
-                });
-                
-                // 更新导航按钮
-                if (step === 1) {
-                    prevBtn.style.display = 'none';
-                    nextBtn.style.display = 'block';
-                    saveBtn.style.display = 'none';
-                } else if (step === totalSteps) {
-                    prevBtn.style.display = 'block';
-                    nextBtn.style.display = 'none';
-                    saveBtn.style.display = 'block';
-                } else {
-                    prevBtn.style.display = 'block';
-                    nextBtn.style.display = 'block';
-                    saveBtn.style.display = 'none';
+            // 填充“系统字段名”下拉框的函数
+            function populateSystemFieldSelect(selectElement, sourceSystem) {
+                // 清空现有选项
+                selectElement.innerHTML = '<option value="">选择系统字段</option>';
+                if (sourceSystem && fieldMapping[sourceSystem]) {
+                    fieldMapping[sourceSystem].forEach(fieldName => {
+                        const newOption = document.createElement('option');
+                        newOption.value = fieldName;
+                        newOption.textContent = fieldName;
+                        selectElement.appendChild(newOption);
+                    });
                 }
-                
-                currentStep = step;
             }
-            
-            // 上一步按钮点击事件
+            // --- 新增代码结束 ---
+            // “上一步”按钮事件
             prevBtn.addEventListener('click', function() {
                 if (currentStep > 1) {
-                    // 保存当前步骤的数据
-                    saveStepData(currentStep);
-                    
-                    // 加载上一步的内容
-                    loadStep(currentStep - 1);
-                    showStep(currentStep - 1);
+                    currentStep--;
+                    loadStep(currentStep);
                 }
             });
-            
-            // 下一步按钮点击事件
+            // “下一步”按钮事件
             nextBtn.addEventListener('click', function() {
                 if (currentStep < totalSteps) {
-                    // 验证当前步骤的必填项
-                    if (validateStep(currentStep)) {
-                        // 保存当前步骤的数据
-                        saveStepData(currentStep);
-                        
-                        // 加载下一步的内容
-                        loadStep(currentStep + 1);
-                        showStep(currentStep + 1);
-                    }
+                    // 这里可以添加表单验证逻辑
+                    currentStep++;
+                    loadStep(currentStep);
                 }
             });
-            
-            // 保存按钮点击事件
+            // “保存”按钮事件
             saveBtn.addEventListener('click', function() {
-                if (validateStep(currentStep)) {
-                    // 保存所有步骤的数据
-                    saveModel();
-                }
-            });
-            
-            // 保存步骤数据
-            function saveStepData(step) {
-                // 这里可以保存当前步骤的数据到临时存储
-                // 例如，可以保存到 sessionStorage 或一个 JavaScript 对象中
-                console.log(`保存步骤 ${step} 的数据`);
-            }
-            
-            // 验证步骤必填项
-            function validateStep(step) {
-                let isValid = true;
-                
-                if (step === 1) {
-                    // 验证基本信息
-                    const modelName = document.getElementById('modelName');
-                    const modelType = document.getElementById('modelType');
-                    const evaluationCycle = document.getElementById('evaluationCycle');
-                    
-                    if (!modelName || !modelName.value) {
-                        alert('请输入模型名称');
-                        isValid = false;
-                    } else if (!modelType || !modelType.value) {
-                        alert('请选择模型类型');
-                        isValid = false;
-                    } else if (!evaluationCycle || !evaluationCycle.value) {
-                        alert('请选择评价周期');
-                        isValid = false;
-                    }
-                } else if (step === 2) {
-                    // 验证参数设置
-                    const paramRows = document.querySelectorAll('#paramTableBody tr');
-                    if (paramRows.length === 0) {
-                        alert('请至少添加一个参数');
-                        isValid = false;
-                    }
-                } else if (step === 3) {
-                    // 验证适用对象
-                    const selectedObjects = document.querySelectorAll('#selectedObjects option');
-                    if (selectedObjects.length === 0) {
-                        alert('请至少选择一个适用对象');
-                        isValid = false;
-                    }
-                } else if (step === 4) {
-                    // 验证要求定义
-                    const requirementRows = document.querySelectorAll('#requirementTableBody tr');
-                    if (requirementRows.length === 0) {
-                        alert('请至少添加一个要求');
-                        isValid = false;
-                    }
-                } else if (step === 5) {
-                    // 验证预期结果
-                    const resultType = document.getElementById('resultType');
-                    const calculationMethod = document.getElementById('calculationMethod');
-                    
-                    if (!resultType || !resultType.value) {
-                        alert('请选择结果类型');
-                        isValid = false;
-                    } else if (!calculationMethod || !calculationMethod.value) {
-                        alert('请选择计算方式');
-                        isValid = false;
-                    }
-                }
-                
-                return isValid;
-            }
-            
-            // 保存模型
-            function saveModel() {
-                // 收集所有数据
-                const modelData = {
-                    modelName: document.getElementById('modelName').value,
-                    modelType: document.getElementById('modelType').value,
-                    evaluationCycle: document.getElementById('evaluationCycle').value,
-                    status: document.getElementById('status').value,
-                    effectiveTime: document.getElementById('effectiveTime').value,
-                    description: document.getElementById('description').value,
-                    sourceSystem: document.getElementById('sourceSystem').value,
-                    collectionMethod: document.getElementById('collectionMethod').value,
-                    updateFrequency: document.getElementById('updateFrequency').value,
-                    objectType: document.getElementById('objectType').value,
-                    resultType: document.getElementById('resultType').value,
-                    calculationMethod: document.getElementById('calculationMethod').value,
-                    minResult: document.getElementById('minResult').value,
-                    maxResult: document.getElementById('maxResult').value,
-                    parameters: [],
-                    mappings: [],
-                    selectedObjects: [],
-                    requirements: [],
-                    levels: []
-                };
-                
-                // 收集参数数据
-                document.querySelectorAll('#paramTableBody tr').forEach(row => {
-                    const cells = row.querySelectorAll('td');
-                    if (cells.length >= 6) {
-                        modelData.parameters.push({
-                            name: cells[0].querySelector('input').value,
-                            type: cells[1].querySelector('select').value,
-                            unit: cells[2].querySelector('input').value,
-                            range: cells[3].querySelector('input').value,
-                            collectionMethod: cells[4].querySelector('select').value,
-                            weight: cells[5].querySelector('input').value
-                        });
-                    }
-                });
-                
-                // 收集映射数据
-                document.querySelectorAll('#mappingTableBody tr').forEach(row => {
-                    const cells = row.querySelectorAll('td');
-                    if (cells.length >= 3) {
-                        modelData.mappings.push({
-                            paramName: cells[0].querySelector('select').value,
-                            fieldName: cells[1].querySelector('input').value,
-                            mapping: cells[2].querySelector('select').value
-                        });
-                    }
-                });
-                
-                // 收集适用对象
-                document.querySelectorAll('#selectedObjects option').forEach(option => {
-                    modelData.selectedObjects.push(option.value);
-                });
-                
-                // 收集要求数据
-                document.querySelectorAll('#requirementTableBody tr').forEach(row => {
-                    const cells = row.querySelectorAll('td');
-                    if (cells.length >= 4) {
-                        modelData.requirements.push({
-                            name: cells[0].querySelector('input').value,
-                            description: cells[1].querySelector('input').value,
-                            condition: cells[2].querySelector('input').value,
-                            weight: cells[3].querySelector('input').value
-                        });
-                    }
-                });
-                
-                // 收集等级数据
-                document.querySelectorAll('#levelTableBody tr').forEach(row => {
-                    const cells = row.querySelectorAll('td');
-                    if (cells.length >= 3) {
-                        modelData.levels.push({
-                            level: cells[0].querySelector('input').value,
-                            range: cells[1].querySelector('input').value,
-                            color: cells[2].querySelector('select').value
-                        });
-                    }
-                });
-                
-                // 这里可以添加实际的保存逻辑，例如发送到服务器
-                console.log('保存模型数据:', modelData);
-                
-                // 显示成功消息
-                alert('模型保存成功！');
-                
+                // 这里可以添加保存逻辑
+                alert('模型已保存！');
                 // 关闭模态框
-                const modal = bootstrap.Modal.getInstance(document.getElementById('addModelModal'));
-                modal.hide();
-                
-                // 重置表单
-                resetForm();
-            }
-            
-            // 重置表单
-            function resetForm() {
-                // 重置到第一步
-                loadStep(1);
-                showStep(1);
-            }
-            
-            // 添加模型模态框重置事件
-            document.getElementById('addModelModal').addEventListener('hidden.bs.modal', function() {
-                resetForm();
+                const addModelModal = bootstrap.Modal.getInstance(document.getElementById('addModelModal'));
+                addModelModal.hide();
             });
+            // 为“添加模型”模态框添加显示事件监听器
+            const addModelModal = document.getElementById('addModelModal');
+            addModelModal.addEventListener('shown.bs.modal', function () {
+                // 当模态框完全显示后，初始化第一步内容
+                currentStep = 1;
+                loadStep(currentStep);
+            });
+            // 初始化参数选择下拉框
+            updateParamSelects();
         });
     </script>
 </body>
-
 </html>
+```
